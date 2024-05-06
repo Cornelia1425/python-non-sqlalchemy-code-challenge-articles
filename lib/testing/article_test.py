@@ -32,7 +32,7 @@ class TestArticle:
 
         # uncomment the next two lines if using Exceptions
         # with pytest.raises(Exception):
-        #     Article(author, magazine, 500)
+            # Article(author, magazine, 500)
 
     def test_title_is_valid(self):
         """title is between 5 and 50 characters inclusive"""
