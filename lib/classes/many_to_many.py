@@ -79,7 +79,12 @@ class Author:
     def magazines(self):
         # if not isinstance(self.magazine, Magazine):
         #     raise Exception("input must be type Magazine!")
-        return [set(article.magazine for article in Article.all if isinstance(article.magazine, Magazine) and article.author == self)]
+        # author_magazines = []
+        # author_magazines.append((article.magazine for article in Article.all if isinstance(article.magazine, Magazine) and article.author == self))
+        # return (set(author_magazines))
+        return (list(article.magazine for article in Article.all if isinstance(article.magazine, Magazine) and article.author == self))
+      
+      
     
 
     def add_article(self, magazine, title):
